@@ -18,31 +18,32 @@
         <div class="row">
           <div class="col-md-3">
             <h5 class="bg-info text-light">Search for a City:</h5>
-            <form class="form-inline" >
-              <input type="search" class="form-control mb-3 ds-input" placeholder="Enter city name..."/>
+            <form class="form-inline" id="search-form" >
+              <input type="search" class="form-control mb-3 ds-input" placeholder="Enter city name..." id="city-name"/>
               <button type="submit" class="btn btn-primary mb-3" >
                 <span class="bi bi-search-heart"></span>
               </button>
             </form>
-            <ul class="list-group"></ul>
+            <ul class="list-group" id="search-history"></ul>
           </div>
 
           <div class="col-md-9">
             <div class="card mt-2">
               <div class="card-body bg-secondary">
+                  <h1 id="city-title">city</h1>
                 <div class="d-flex flex-row">
-                  <h2 class="card-title align-self-center"></h2>
+                  <h2 class="card-title align-self-center" id="city-name"></h2>
                 </div>
-                <h6 class="card-subtitle text-dark">Temperature:</h6>
-                <h6 class="card-subtitle mt-3 text-dark">Humidity:</h6>
-                <h6 class="card-subtitle mt-3 text-dark">Wind Speed:</h6>
-                <h6 class="card-subtitle mt-3 text-dark">UV Index:</h6>
+                <h6 class="card-subtitle text-dark" id="temperature">Temperature:</h6>
+                <h6 class="card-subtitle mt-3 text-dark" id="humidity">Humidity:</h6>
+                <h6 class="card-subtitle mt-3 text-dark" id="wind-speed">Wind Speed:</h6>
+                <h6 class="card-subtitle mt-3 text-dark" id="uv-index">UV Index:</h6>
               </div>
             </div>
 
-            <div class="bg-info">
-              <h2 class="card-title mt-3 text-light">5-Day Forecast:</h2>
-              <div class="row justify-content-between">
+            <div>
+              <h2 class="card-title mt-3 text-light bg-info">5-Day Forecast:</h2>
+              <div class="row justify-content-between" id="five-day-forecast">
               </div>
             </div>
           </div>
