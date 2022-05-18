@@ -28,7 +28,6 @@ let cityWeather = function (city) {
       alert("Unable to connect to OpenWeather")
     })
 }
-
 // search form
 let searchSubmitHandler = function (event) {
   event.preventDefault()
