@@ -5,12 +5,7 @@ let key = "542e6ef66e55b397e88fd211d683b33d"
 
 // api call
 let cityWeather = function (city) {
-  let apiUrl =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-    city +
-    "&appid=" +
-    key +
-    "&units=imperial"
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=imperial`
   fetch(apiUrl)
     .then(function (response) {
       if (response.ok) {
@@ -56,13 +51,7 @@ let displayWeather = function (Data) {
 
   // uv api call
   fetch(
-    "https://api.openweathermap.org/data/2.5/uvi?lat=" +
-      Data.coord.lat +
-      "&lon=" +
-      Data.coord.lon +
-      "&appid=" +
-      key +
-      ""
+    `https://api.openweathermap.org/data/2.5/uvi?lat=${Data.coord.lat}&lon=${Data.coord.lon}&appid=${key}`
   ).then(function (response) {
     response.json().then(function (data) {
       // console.log("uv data ",data);
@@ -78,11 +67,7 @@ let displayWeather = function (Data) {
       let uviData = data
       // five-day api call
       fetch(
-        "https://api.openweathermap.org/data/2.5/forecast?q=" +
-          Data.name +
-          "&appid=" +
-          key +
-          "&units=imperial"
+        `https://api.openweathermap.org/data/2.5/forecast?q=${Data.name}&appid=${key}&units=imperial`
       ).then(function (response) {
         response.json().then(function (data) {
           console.log(uviData)
